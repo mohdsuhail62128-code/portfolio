@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacist | Web Developer</title>
+    <title>Mohd Suhail | Registered Pharmacist</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -13,12 +13,12 @@
 </head>
 <body>
 
-    <!-- ===== NAVBAR ===== -->
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
         <div class="logo">Pharmacist Portfolio</div>
 
-        <!-- Hamburger button for mobile -->
-        <button id="menu-toggle">☰</button>
+        <!-- Hamburger button (Mobile) -->
+        <button id="menu-toggle" aria-label="Open Menu">☰</button>
 
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -27,33 +27,41 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Theme toggle button -->
-        <button id="theme-toggle">🌙</button>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ================= HERO ================= -->
     <section id="home" class="hero">
         <h1>Hi, I'm <span>Mohd Suhail</span></h1>
         <p>Registered Pharmacist</p>
 
-        <!-- Download Resume Button -->
-        <a href="assets/Mohd_Suhail_Resume.pdf" download class="btn">Download Resume</a>
+        <div class="hero-buttons">
+            <a href="assets/Mohd_Suhail_Resume.pdf" download class="btn">
+                Download Resume
+            </a>
 
-        <!-- View Images Button -->
-        <button class="btn" id="open-gallery">View Images</button>
+            <button class="btn secondary-btn" id="open-gallery">
+                View Images
+            </button>
+        </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ================= ABOUT ================= -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            I am a Registered pharmacist with a strong commitment to patient safety, medication accuracy, and evidence-based healthcare. I have experience in dispensing, counseling patients, and collaborating with healthcare professionals to optimize treatment outcomes. I am dedicated to continuous learning and staying up to date with advancements in pharmaceutical care.
+            I am a Registered Pharmacist with a strong commitment to patient safety,
+            medication accuracy, and evidence-based healthcare. I have experience in
+            dispensing medicines, counseling patients, and collaborating with healthcare
+            professionals to improve treatment outcomes. I continuously upgrade my
+            knowledge to stay aligned with modern pharmaceutical practices.
         </p>
     </section>
 
-    <!-- ===== SKILLS ===== -->
+    <!-- ================= SKILLS ================= -->
     <section id="skills" class="skills">
-        <h2>Skills</h2>
+        <h2>Professional Skills</h2>
         <div class="skill-box">
             <span>Medication Management</span>
             <span>Patient Counseling</span>
@@ -63,23 +71,28 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ================= CONTACT ================= -->
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Email: mohdsuhail62128@gmail.com</p>
-        <p>Phone: 8604466914</p>
+        <p><strong>Email:</strong> mohdsuhail62128@gmail.com</p>
+        <p><strong>Phone:</strong> +91 8604466914</p>
     </section>
 
-    <!-- ===== IMAGE GALLERY MODAL ===== -->
+    <!-- ================= IMAGE GALLERY MODAL ================= -->
     <div class="gallery-modal" id="gallery">
         <span class="close-btn" id="close-gallery">&times;</span>
+
         <div class="gallery-content">
-            <img src="assets/images/class.jpeg" alt="class">
-            <img src="assets/images/lab.jpeg" alt="lab">
+            <div class="image-box">
+                <img src="assets/images/class.jpeg" alt="Pharmacy Class">
+            </div>
+            <div class="image-box">
+                <img src="assets/images/lab.jpeg" alt="Pharmacy Lab">
+            </div>
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ================= FOOTER ================= -->
     <footer>
         <p>© 2025 Mohd Suhail. All Rights Reserved.</p>
     </footer>
@@ -89,3 +102,4 @@
 
 </body>
 </html>
+
