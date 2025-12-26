@@ -10,6 +10,11 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    />
 </head>
 <body>
 
@@ -17,7 +22,6 @@
     <nav class="navbar">
         <div class="logo">Pharmacist Portfolio</div>
 
-        <!-- Hamburger button (Mobile) -->
         <button id="menu-toggle" aria-label="Open Menu">☰</button>
 
         <ul class="nav-links">
@@ -27,13 +31,16 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Theme Toggle -->
         <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
     </nav>
 
     <!-- ================= HERO ================= -->
     <section id="home" class="hero">
-        <h1>Hi, I'm <span>Mohd Suhail</span></h1>
+        <h1 class="hero-title">
+  Hi, I'm <span id="typewriter"></span>
+</h1>
+
+
         <p>Registered Pharmacist</p>
 
         <div class="hero-buttons">
@@ -54,8 +61,7 @@
             I am a Registered Pharmacist with a strong commitment to patient safety,
             medication accuracy, and evidence-based healthcare. I have experience in
             dispensing medicines, counseling patients, and collaborating with healthcare
-            professionals to improve treatment outcomes. I continuously upgrade my
-            knowledge to stay aligned with modern pharmaceutical practices.
+            professionals to improve treatment outcomes.
         </p>
     </section>
 
@@ -74,15 +80,30 @@
     <!-- ================= CONTACT ================= -->
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p><strong>Email:</strong> mohdsuhail62128@gmail.com</p>
-        <p><strong>Phone:</strong> +91 8604466914</p>
-        <p>
-    <strong>Facebook:</strong>
-    <a href="https://www.facebook.com/profile.php?id=61579175631127&sk=about" target="_blank">
-        facebook.com/yourusername
-    </a>
-</p>
 
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong>
+            <a href="mailto:mohdsuhail62128@gmail.com">
+                mohdsuhail62128@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong>
+            <a href="tel:+918604466914">
+                +91 8604466914
+            </a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-facebook"></i>
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/profile.php?id=61579175631127&sk=about" target="_blank">
+                Visit Profile
+            </a>
+        </p>
     </section>
 
     <!-- ================= IMAGE GALLERY MODAL ================= -->
@@ -90,12 +111,8 @@
         <span class="close-btn" id="close-gallery">&times;</span>
 
         <div class="gallery-content">
-            <div class="image-box">
-                <img src="assets/images/class.jpeg" alt="Pharmacy Class">
-            </div>
-            <div class="image-box">
-                <img src="assets/images/lab.jpeg" alt="Pharmacy Lab">
-            </div>
+            <img src="assets/images/class.jpeg" alt="Pharmacy Class">
+            <img src="assets/images/lab.jpeg" alt="Pharmacy Lab">
         </div>
     </div>
 
@@ -107,6 +124,18 @@
     <!-- JS -->
     <script src="js/script.js" defer></script>
 
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/918604466914"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
+
 

@@ -1,77 +1,54 @@
-// ================= DOM READY =================
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ---------- THEME TOGGLE ---------- */
+    /* ===== Theme Toggle ===== */
     const themeToggle = document.getElementById("theme-toggle");
+    themeToggle?.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeToggle.textContent =
+            document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
 
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark");
-
-            themeToggle.textContent =
-                document.body.classList.contains("dark") ? "☀️" : "🌙";
-        });
-    }
-
-    /* ---------- HAMBURGER MENU ---------- */
+    /* ===== Mobile Menu ===== */
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", (e) => {
-            e.stopPropagation(); // prevent immediate close
-            navLinks.classList.toggle("active");
-        });
+    menuToggle?.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
-        // Close menu on link click (mobile UX)
-        navLinks.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener("click", (e) => {
-            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-                navLinks.classList.remove("active");
-            }
-        });
-    }
-
-    /* ---------- IMAGE GALLERY MODAL ---------- */
+    /* ===== Gallery Modal ===== */
     const openGallery = document.getElementById("open-gallery");
     const closeGallery = document.getElementById("close-gallery");
     const gallery = document.getElementById("gallery");
 
-    if (openGallery && closeGallery && gallery) {
+    openGallery?.addEventListener("click", () => {
+        gallery.style.display = "flex";
+    });
 
-        // Open gallery
-        openGallery.addEventListener("click", () => {
-            gallery.style.display = "flex";
-            document.body.style.overflow = "hidden"; // prevent background scroll
-        });
+    closeGallery?.addEventListener("click", () => {
+        gallery.style.display = "none";
+    });
 
-        // Close gallery
-        const closeModal = () => {
+    gallery?.addEventListener("click", (e) => {
+        if (e.target === gallery) {
             gallery.style.display = "none";
-            document.body.style.overflow = "auto";
-        };
+        }
+    });
 
-        closeGallery.addEventListener("click", closeModal);
+});
+// ------------------ SMOOTH TYPEWRITER ------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "Mohd Suhail";
+    const target = document.getElementById("typewriter");
+    let index = 0;
 
-        // Close when clicking outside content
-        gallery.addEventListener("click", (e) => {
-            if (e.target === gallery) {
-                closeModal();
-            }
-        });
-
-        // Close on ESC key
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && gallery.style.display === "flex") {
-                closeModal();
-            }
-        });
+    function type() {
+        if (index < text.length) {
+            target.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 120);
+        }
     }
 
+    setTimeout(type, 500); // slight delay for smooth start
 });
